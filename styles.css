@@ -102,7 +102,7 @@ nav .cta-btn:hover { background: var(--green-bright); transform: translateY(-1px
   text-transform: uppercase; font-weight: 500;
 }
 .hero-meta-item .dot {
-  width: 8px; height: 8px; background: var(--green); border-radius: 50%;
+  width: 6px; height: 6px; background: var(--green); border-radius: 50%;
   display: inline-block; animation: pulse 2s infinite;
 }
 
