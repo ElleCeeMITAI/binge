@@ -135,7 +135,7 @@ section { padding: 100px 40px; position: relative; }
 .problem-insight { margin-top: 60px; padding: 40px; background: #f9fafb; border-left: 4px solid var(--green); font-size: clamp(18px, 2vw, 22px); line-height: 1.5; font-family: 'Playfair Display', serif; font-style: italic; max-width: 900px; }
 
 .how-section { background: var(--black); }
-.how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px; }
+.how-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 60px; }
 .how-card { background: transparent; border: 1px solid var(--border); padding: 48px 36px; border-radius: 4px; transition: border-color 0.3s, transform 0.4s; position: relative; overflow: hidden; }
 .how-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--card-color); transform: scaleY(0); transform-origin: top; transition: transform 0.4s ease; }
 .how-card:hover::before { transform: scaleY(1); }
@@ -216,7 +216,7 @@ footer { background: var(--black); padding: 60px 40px 40px; border-top: 1px soli
   .hero-lockup { gap: 16px; }
   .hero-title { letter-spacing: -3px; }
   section { padding: 60px 24px; }
-  .problem-grid, .how-grid { grid-template-columns: 1fr; gap: 16px; }
+  .problem-grid, .how-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .impact-grid { grid-template-columns: 1fr; gap: 40px; }
   .impact-item .stat { width: 100px; font-size: 36px; }
   .impact-item { flex-direction: column; gap: 12px; }
