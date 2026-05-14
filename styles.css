@@ -42,8 +42,8 @@ nav .cta-btn {
 nav .cta-btn:hover { background: var(--green-bright); transform: translateY(-1px); }
 
 .hero {
-  min-height: 100vh; padding: 130px 40px 60px;
-  display: flex; flex-direction: column; justify-content: center;
+  min-height: 100vh; padding: 130px clamp(40px, 10vw, 200px) 60px;
+  display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
   position: relative; overflow: hidden;
 }
 .hero-eyebrow {
