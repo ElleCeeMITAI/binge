@@ -228,4 +228,6 @@ footer { background: var(--black); padding: 60px 40px 40px; border-top: 1px soli
   .marquee-track { font-size: 20px; gap: 32px; }
   .marquee-track span { gap: 32px; }
   .final-cta { padding: 80px 24px; }
+  .shows-carousel { padding: 0 24px 20px; }
+  .show-card { min-width: 220px; max-width: 220px; }
 }
