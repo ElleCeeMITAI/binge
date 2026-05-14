@@ -95,7 +95,7 @@ nav .cta-btn:hover { background: var(--green-bright); transform: translateY(-1px
 .waitlist-success.show { display: block; animation: fadeUp 0.4s ease; }
 .waitlist-error { color: var(--coral); font-size: 13px; margin-top: 12px; display: none; }
 .waitlist-error.show { display: block; }
-.hero-meta { display: flex; gap: 32px; margin-top: 32px; flex-wrap: wrap; }
+.hero-meta { display: flex; gap: 32px; margin-top: 32px; flex-wrap: wrap; justify-content: center; }
 .hero-meta-item {
   display: flex; align-items: center; gap: 8px;
   font-size: 11px; color: var(--muted); letter-spacing: 2px;
