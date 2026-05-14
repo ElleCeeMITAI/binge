@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Binge — Where the scroll becomes the change</title>
+<meta name="description" content="Binge is a vertical microdrama platform for 18–34s. Premium serialized stories that turn the scroll into real-world civic action. Join the waitlist.">
+<meta property="og:title" content="Binge — Where the scroll becomes the change">
+<meta property="og:description" content="Premium vertical microdramas for 18–34s. Stories that move you, then move with you.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bingemicrodrama.com">
+<meta property="og:image" content="https://bingemicrodrama.com/binge_icon_256.png">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" type="image/png" href="binge_icon_64.png">
+<link rel="apple-touch-icon" href="binge_icon_256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="brand-lockup">
+    <img src="binge_icon_128.png" alt="Binge">
+    <span class="wordmark">Binge</span>
+  </a>
+  <div class="nav-right">
+    <a href="#how" class="nav-link">How it works</a>
+    <a href="#impact" class="nav-link">Impact</a>
+    <a href="#waitlist" class="cta-btn">Join waitlist</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-eyebrow">EST. 2026 · ISSUE 01 · VERTICAL — FIRST</div>
+  <div class="hero-lockup">
+    <img src="binge_icon.png" alt="Binge logo">
+    <h1 class="hero-title">Binge.</h1>
+  </div>
+  <p class="hero-tagline">Where the scroll <em>becomes</em><br>the <span class="coral">change</span>.</p>
+  <p class="hero-description">Premium vertical microdramas for the 18–34 generation that already cares. Hollywood-caliber stories about mental health, climate, equity, and justice — written for the way you watch: thumb-up, 90 seconds at a time, on the train or in bed at one a.m. Every episode is a step closer to the world you want.</p>
+
+  <form class="waitlist-form" id="hero-form" onsubmit="handleSubmit(event, 'hero')">
+    <input type="email" name="email" placeholder="Your email" required id="hero-email" autocomplete="email">
+    <input type="hidden" name="_subject" value="New Binge waitlist signup">
+    <input type="hidden" name="source" value="hero">
+    <button type="submit" id="hero-button">Join the waitlist →</button>
+  </form>
+  <div class="waitlist-success" id="hero-success">
+    <strong>You're in.</strong> Welcome to Binge. We'll send your first preview before launch.
+  </div>
+  <div class="waitlist-error" id="hero-error">Something went wrong. Please try again or email <a href="mailto:joinbinge@gmail.com" style="color: var(--coral);">joinbinge@gmail.com</a>.</div>
+
+  <div class="hero-meta">
+    <div class="hero-meta-item"><span class="dot"></span>Now accepting waitlist</div>
+    <div class="hero-meta-item">iOS · Android · 2026 launch</div>
+    <div class="hero-meta-item">Original series · daily drops</div>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Cinematic Vertical Originals <span class="bullet"></span> Stories that Move You <span class="bullet"></span> Made for the Thumb <span class="bullet"></span> Daily Drops <span class="bullet"></span> Earn Binge Coins <span class="bullet"></span></span>
+    <span>Cinematic Vertical Originals <span class="bullet"></span> Stories that Move You <span class="bullet"></span> Made for the Thumb <span class="bullet"></span> Daily Drops <span class="bullet"></span> Earn Binge Coins <span class="bullet"></span></span>
+    <span>Cinematic Vertical Originals <span class="bullet"></span> Stories that Move You <span class="bullet"></span> Made for the Thumb <span class="bullet"></span> Daily Drops <span class="bullet"></span> Earn Binge Coins <span class="bullet"></span></span>
+  </div>
+</div>
+
+<section class="problem-section reveal" id="problem">
+  <div class="section-label">EXHIBIT A · FIG. 01 · THE PROBLEM</div>
+  <h2 class="section-title">A generation that <em>cares.</em><br>A system that's <em>lost the bridge.</em></h2>
+  <div class="problem-grid">
+    <div class="problem-stat">
+      <div class="num">53%</div>
+      <div class="label">of 18–29-year-olds did not vote in the 2024 election</div>
+      <div class="source">CIRCLE · Tufts University, 2025</div>
+    </div>
+    <div class="problem-stat">
+      <div class="num">61%</div>
+      <div class="label">of young non-voters say they rarely or never participate civically</div>
+      <div class="source">CIRCLE · Tufts University, 2025</div>
+    </div>
+    <div class="problem-stat">
+      <div class="num">4–5h</div>
+      <div class="label">spent daily on social media — more issue exposure than any prior generation</div>
+      <div class="source">S&amp;P Kagan · Harris Poll, 2024</div>
+    </div>
+  </div>
+  <div class="problem-insight">"This isn't apathy. It's a translation problem. Short-form entertainment captures their attention — but no trusted infrastructure routes it to action."</div>
+</section>
+
+<div class="marquee marquee-coral">
+  <div class="marquee-track">
+    <span>Mental Health <span class="bullet"></span> Climate <span class="bullet"></span> Reproductive Rights <span class="bullet"></span> Social Justice <span class="bullet"></span> LGBTQ+ Rights <span class="bullet"></span> Civic Engagement <span class="bullet"></span> Equity <span class="bullet"></span></span>
+    <span>Mental Health <span class="bullet"></span> Climate <span class="bullet"></span> Reproductive Rights <span class="bullet"></span> Social Justice <span class="bullet"></span> LGBTQ+ Rights <span class="bullet"></span> Civic Engagement <span class="bullet"></span> Equity <span class="bullet"></span></span>
+    <span>Mental Health <span class="bullet"></span> Climate <span class="bullet"></span> Reproductive Rights <span class="bullet"></span> Social Justice <span class="bullet"></span> LGBTQ+ Rights <span class="bullet"></span> Civic Engagement <span class="bullet"></span> Equity <span class="bullet"></span></span>
+  </div>
+</div>
+
+<section class="how-section reveal" id="how">
+  <div class="section-label">FIG. 02 · HOW IT WORKS</div>
+  <h2 class="section-title">Three taps from <em>story</em> to <em>action</em>.</h2>
+  <div class="how-grid">
+    <div class="how-card" style="--card-color: #1FAF5C;">
+      <div class="step-num">01</div>
+      <h3>Watch</h3>
+      <p>1–3 minute cinematic vertical episodes. Real actors, professional direction. Characters facing mental health, climate, equity, and civic challenges — written like the shows you already binge.</p>
+    </div>
+    <div class="how-card" style="--card-color: #E85D3C;">
+      <div class="step-num">02</div>
+      <h3>Act</h3>
+      <p>End-card CTAs route you to vetted nonprofit partners. Sign a pledge. Volunteer. Register to vote. Donate. Verified, trackable, optional — never preachy.</p>
+    </div>
+    <div class="how-card" style="--card-color: #FFFFFF;">
+      <div class="step-num">03</div>
+      <h3>Unlock</h3>
+      <p>Earn Binge Coins for every verified action. Coins discount your subscription, unlock bonus episodes, and build a private civic record only you can see.</p>
+    </div>
+  </div>
+</section>
+
+<section class="shows-section reveal" id="shows">
+  <div class="inner">
+    <div class="section-label">FIG. 03 · ISSUE 01 — ORIGINALS</div>
+    <h2 class="section-title">Shows you've been <em>scrolling for.</em></h2>
+  </div>
+  <div class="shows-carousel">
+    <div class="show-card">
+      <div class="show-image" style="--card-bg-1: #2C5F2D; --card-bg-2: #0F7A40;">
+        <span class="show-tag">Mental Health</span>
+        <span class="show-eps">50 eps</span>
+        <div class="show-num">01</div>
+      </div>
+      <div class="show-title">That Girl Energy</div>
+      <div class="show-meta">Drama · 1.5–2.5 min</div>
+    </div>
+    <div class="show-card">
+      <div class="show-image" style="--card-bg-1: #6D2E46; --card-bg-2: #E85D3C;">
+        <span class="show-tag">LGBTQ+ Rights</span>
+        <span class="show-eps">42 eps</span>
+        <div class="show-num">02</div>
+      </div>
+      <div class="show-title">Love Language</div>
+      <div class="show-meta">Romance · 2–3 min</div>
+    </div>
+    <div class="show-card">
+      <div class="show-image" style="--card-bg-1: #065A82; --card-bg-2: #1C7293;">
+        <span class="show-tag">Climate</span>
+        <span class="show-eps">38 eps</span>
+        <div class="show-num">03</div>
+      </div>
+      <div class="show-title">Eco Odyssey</div>
+      <div class="show-meta">Thriller · 2–3 min</div>
+    </div>
+    <div class="show-card">
+      <div class="show-image" style="--card-bg-1: #84B59F; --card-bg-2: #2C5F2D;">
+        <span class="show-tag">Environment</span>
+        <span class="show-eps">45 eps</span>
+        <div class="show-num">04</div>
+      </div>
+      <div class="show-title">Green Girl Era</div>
+      <div class="show-meta">Drama · 2–3 min</div>
+    </div>
+    <div class="show-card">
+      <div class="show-image" style="--card-bg-1: #21295C; --card-bg-2: #2F3C7E;">
+        <span class="show-tag">Social Justice</span>
+        <span class="show-eps">60 eps</span>
+        <div class="show-num">05</div>
+      </div>
+      <div class="show-title">Unfiltered</div>
+      <div class="show-meta">Drama · 1.5–2.5 min</div>
+    </div>
+    <div class="show-card">
+      <div class="show-image" style="--card-bg-1: #B85042; --card-bg-2: #6D2E46;">
+        <span class="show-tag">Civic</span>
+        <span class="show-eps">Coming Soon</span>
+        <div class="show-num">06</div>
+      </div>
+      <div class="show-title">Ballot Box Babes</div>
+      <div class="show-meta">Comedy · 1.5–2 min</div>
+    </div>
+  </div>
+  <div class="shows-hint">↔ Swipe to explore</div>
+</section>
+
+<section class="impact-section reveal" id="impact">
+  <div class="section-label">FIG. 04 · WHY THIS WORKS</div>
+  <h2 class="section-title">Storytelling that <em>actually</em> changes behavior.</h2>
+  <div class="impact-grid">
+    <div class="impact-list">
+      <div class="impact-item">
+        <div class="stat">25 yrs</div>
+        <div class="text"><strong>Of proven impact, globally.</strong>Population Media Center has used entertainment-education methodology to drive measurable behavior change across Mexico, Nepal, Liberia, Zambia and 50+ countries.</div>
+      </div>
+      <div class="impact-item">
+        <div class="stat">27K+</div>
+        <div class="text"><strong>Reproductive health resource clicks.</strong>Driven by East Los High — the U.S. scripted-drama proof point that this model works on American audiences too.</div>
+      </div>
+      <div class="impact-item">
+        <div class="stat">$14B</div>
+        <div class="text"><strong>Microdrama market projected for 2026.</strong>Users spend 35+ min/day in microdrama apps — more than Netflix, Disney+, or Prime Video.</div>
+      </div>
+    </div>
+    <div class="impact-quote">
+      <div class="quote-mark">"</div>
+      <div class="quote-text">Binge is what happens when twenty years of social impact entertainment meets the format Gen Z actually watches.</div>
+      <div class="quote-attr">LISA CARUSO · FOUNDER · HARVARD KENNEDY SCHOOL</div>
+    </div>
+  </div>
+</section>
+
+<section class="partners-section">
+  <div class="partners-label">BUILT WITH PROVEN IMPACT INFRASTRUCTURE</div>
+  <div class="partners-row">
+    <div class="partner-pill">Population Media Center</div>
+    <div class="partner-pill">NAMI</div>
+    <div class="partner-pill">The Trevor Project</div>
+    <div class="partner-pill">NAACP</div>
+    <div class="partner-pill">Innocence Project</div>
+    <div class="partner-pill">NRDC</div>
+    <div class="partner-pill">Vote.org</div>
+    <div class="partner-pill">HeadCount</div>
+    <div class="partner-pill">5 Calls</div>
+  </div>
+</section>
+
+<section class="final-cta" id="waitlist">
+  <div class="label">JOIN THE WAITLIST</div>
+  <h2>Be first.</h2>
+  <p>Founding members get early access, free Binge Coins to start their civic record, and a hand in shaping the original series slate.</p>
+  <form class="waitlist-form" id="cta-form" onsubmit="handleSubmit(event, 'cta')">
+    <input type="email" name="email" placeholder="Your email" required id="cta-email" autocomplete="email">
+    <input type="hidden" name="_subject" value="New Binge waitlist signup">
+    <input type="hidden" name="source" value="cta">
+    <button type="submit" id="cta-button">Reserve your spot →</button>
+  </form>
+  <div class="waitlist-success" id="cta-success"><strong>You're in.</strong> See you at launch.</div>
+  <div class="waitlist-error" id="cta-error" style="color: var(--black);">Something went wrong. Please try again.</div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-lockup">
+        <img src="binge_icon_128.png" alt="Binge">
+        <span class="name">Binge</span>
+      </div>
+      <p class="footer-tagline">A vertical microdrama platform for 18–34s. Stories that move you, then move with you.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Product</h4>
+      <a href="#how">How it works</a>
+      <a href="#shows">Shows</a>
+      <a href="#impact">Impact</a>
+      <a href="#waitlist">Waitlist</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="mailto:joinbinge@gmail.com">Contact</a>
+      <a href="#impact">Mission</a>
+      <a href="#impact">Partners</a>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <a href="mailto:joinbinge@gmail.com">joinbinge@gmail.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Binge. All rights reserved.</div>
+    <div>bingemicrodrama.com</div>
+  </div>
+</footer>
+
+<script>
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+
+async function handleSubmit(event, prefix) {
+  event.preventDefault();
+  const form = document.getElementById(prefix + '-form');
+  const button = document.getElementById(prefix + '-button');
+  const successEl = document.getElementById(prefix + '-success');
+  const errorEl = document.getElementById(prefix + '-error');
+  errorEl.classList.remove('show');
+  button.disabled = true;
+  button.textContent = 'Joining…';
+  try {
+    const formData = new FormData(form);
+    const response = await fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      form.style.display = 'none';
+      successEl.classList.add('show');
+    } else {
+      throw new Error('Submission failed');
+    }
+  } catch (err) {
+    errorEl.classList.add('show');
+    button.disabled = false;
+    button.textContent = prefix === 'hero' ? 'Join the waitlist →' : 'Reserve your spot →';
+  }
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('show');
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
