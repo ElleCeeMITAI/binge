@@ -109,7 +109,7 @@ nav .cta-btn:hover { background: var(--green-bright); transform: translateY(-1px
 .marquee { background: var(--green); color: var(--black); padding: 22px 0; overflow: hidden; position: relative; }
 .marquee-track {
   display: flex; gap: 60px;
-  animation: marquee 40s linear infinite;
+  animation: marquee 20s linear infinite;
   white-space: nowrap;
   font-family: 'Playfair Display', serif;
   font-size: 28px; font-weight: 700; font-style: italic; letter-spacing: -0.5px;
