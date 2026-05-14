@@ -340,6 +340,18 @@ async function handleSubmit(event, prefix) {
   }
 }
 
+// Mobile tap-to-toggle show overlays
+document.querySelectorAll('.show-card').forEach(card => {
+  card.addEventListener('click', function(e) {
+    if (window.innerWidth <= 900) {
+      const overlay = this.querySelector('.show-overlay');
+      const isActive = overlay.classList.contains('active');
+      document.querySelectorAll('.show-overlay.active').forEach(o => o.classList.remove('active'));
+      if (!isActive) overlay.classList.add('active');
+    }
+  });
+});
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('show');

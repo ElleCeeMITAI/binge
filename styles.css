@@ -160,7 +160,7 @@ section { padding: 100px 40px; position: relative; }
 .show-meta { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 2px; font-weight: 500; }
 .shows-hint { color: var(--muted); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; text-align: center; margin-top: 20px; font-weight: 500; }
 .show-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.88); z-index: 3; display: flex; flex-direction: column; justify-content: flex-end; padding: 24px 20px; opacity: 0; transform: translateY(8px); transition: opacity 0.3s ease, transform 0.3s ease; border-radius: 6px; }
-.show-card:hover .show-overlay { opacity: 1; transform: translateY(0); }
+.show-card:hover .show-overlay, .show-overlay.active { opacity: 1; transform: translateY(0); }
 .show-overlay-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; font-style: italic; color: var(--white); margin-bottom: 8px; }
 .show-overlay-text { font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.55; margin-bottom: 16px; }
 .show-overlay-actions { display: flex; align-items: center; gap: 12px; }
