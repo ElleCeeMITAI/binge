@@ -350,13 +350,27 @@ async function handleSubmit(event, prefix) {
   }
 }
 
-// Mobile overlay: single touchstart handler on document
+// Mobile overlay toggle
 function closeAllOverlays() {
   document.querySelectorAll('.show-overlay.active').forEach(o => o.classList.remove('active'));
 }
 
+let touchStartX = 0, touchStartY = 0, didScroll = false;
+
 document.addEventListener('touchstart', function(e) {
-  if (window.innerWidth > 900) return;
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+  didScroll = false;
+}, { passive: true });
+
+document.addEventListener('touchmove', function(e) {
+  const dx = Math.abs(e.touches[0].clientX - touchStartX);
+  const dy = Math.abs(e.touches[0].clientY - touchStartY);
+  if (dx > 8 || dy > 8) didScroll = true;
+}, { passive: true });
+
+document.addEventListener('touchend', function(e) {
+  if (window.innerWidth > 900 || didScroll) return;
   const card = e.target.closest('.show-card');
   if (!card) { closeAllOverlays(); return; }
   const overlay = card.querySelector('.show-overlay');
@@ -365,7 +379,7 @@ document.addEventListener('touchstart', function(e) {
   if (!isActive) overlay.classList.add('active');
 }, { passive: true });
 
-// Close on carousel scroll
+// Also close on carousel scroll
 const carousel = document.querySelector('.shows-carousel');
 if (carousel) carousel.addEventListener('scroll', closeAllOverlays, { passive: true });
 
