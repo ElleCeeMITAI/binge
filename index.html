@@ -351,24 +351,38 @@ async function handleSubmit(event, prefix) {
 }
 
 // Mobile tap-to-toggle show overlays
+function closeAllOverlays() {
+  document.querySelectorAll('.show-overlay.active').forEach(o => o.classList.remove('active'));
+}
+
 document.querySelectorAll('.show-card').forEach(card => {
   card.addEventListener('click', function(e) {
     if (window.innerWidth <= 900) {
       e.stopPropagation();
       const overlay = this.querySelector('.show-overlay');
       const isActive = overlay.classList.contains('active');
-      document.querySelectorAll('.show-overlay.active').forEach(o => o.classList.remove('active'));
+      closeAllOverlays();
       if (!isActive) overlay.classList.add('active');
     }
   });
 });
 
-// Close overlay when tapping outside a card on mobile
-document.addEventListener('click', function() {
-  if (window.innerWidth <= 900) {
-    document.querySelectorAll('.show-overlay.active').forEach(o => o.classList.remove('active'));
-  }
+// Tapping the overlay background closes it
+document.querySelectorAll('.show-overlay').forEach(overlay => {
+  overlay.addEventListener('click', function(e) {
+    if (window.innerWidth <= 900 && !e.target.closest('.show-overlay-play') && !e.target.closest('.show-overlay-icon')) {
+      e.stopPropagation();
+      closeAllOverlays();
+    }
+  });
 });
+
+// Close on carousel scroll
+const carousel = document.querySelector('.shows-carousel');
+if (carousel) carousel.addEventListener('scroll', closeAllOverlays);
+
+// Close when tapping outside
+document.addEventListener('click', closeAllOverlays);
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
