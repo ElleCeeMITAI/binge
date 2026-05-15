@@ -350,39 +350,24 @@ async function handleSubmit(event, prefix) {
   }
 }
 
-// Mobile tap-to-toggle show overlays
+// Mobile overlay: single touchstart handler on document
 function closeAllOverlays() {
   document.querySelectorAll('.show-overlay.active').forEach(o => o.classList.remove('active'));
 }
 
-document.querySelectorAll('.show-card').forEach(card => {
-  card.addEventListener('click', function(e) {
-    if (window.innerWidth <= 900) {
-      e.stopPropagation();
-      const overlay = this.querySelector('.show-overlay');
-      const isActive = overlay.classList.contains('active');
-      closeAllOverlays();
-      if (!isActive) overlay.classList.add('active');
-    }
-  });
-});
-
-// Tapping the overlay background closes it
-document.querySelectorAll('.show-overlay').forEach(overlay => {
-  overlay.addEventListener('click', function(e) {
-    if (window.innerWidth <= 900 && !e.target.closest('.show-overlay-play') && !e.target.closest('.show-overlay-icon')) {
-      e.stopPropagation();
-      closeAllOverlays();
-    }
-  });
-});
+document.addEventListener('touchstart', function(e) {
+  if (window.innerWidth > 900) return;
+  const card = e.target.closest('.show-card');
+  if (!card) { closeAllOverlays(); return; }
+  const overlay = card.querySelector('.show-overlay');
+  const isActive = overlay.classList.contains('active');
+  closeAllOverlays();
+  if (!isActive) overlay.classList.add('active');
+}, { passive: true });
 
 // Close on carousel scroll
 const carousel = document.querySelector('.shows-carousel');
-if (carousel) carousel.addEventListener('scroll', closeAllOverlays);
-
-// Close when tapping outside
-document.addEventListener('click', closeAllOverlays);
+if (carousel) carousel.addEventListener('scroll', closeAllOverlays, { passive: true });
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
