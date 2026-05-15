@@ -158,6 +158,13 @@ section { padding: 100px 40px; position: relative; }
 .show-num { font-family: 'Playfair Display', serif; font-size: 72px; font-weight: 900; font-style: italic; color: rgba(255,255,255,0.95); line-height: 1; position: relative; z-index: 2; letter-spacing: -3px; }
 .show-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; font-style: italic; margin-bottom: 6px; color: var(--white); }
 .show-meta { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 2px; font-weight: 500; }
+.karma-badge {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--green); color: var(--black);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px; margin: 12px 0 20px;
+  box-shadow: 0 0 0 3px rgba(31,175,92,0.25);
+}
 .shows-hint { color: var(--muted); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; text-align: center; margin-top: 20px; font-weight: 500; }
 .show-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.88); z-index: 3; display: flex; flex-direction: column; justify-content: flex-end; padding: 24px 20px; opacity: 0; transform: translateY(8px); transition: opacity 0.3s ease, transform 0.3s ease; border-radius: 6px; }
 .show-card:hover .show-overlay, .show-overlay.active { opacity: 1; transform: translateY(0); }
